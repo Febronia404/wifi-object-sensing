@@ -1,0 +1,31 @@
+﻿# Old raw recordings in the project root (training data lives in data/)
+/csi_*.csv
+
+# Backups and old presentation
+files.zip
+GOR_Project_Presentation_v2.*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Arduino build output
+build/
+*.bin
+*.elf
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+
+# Old dashboard versions and personal helper scripts
+csi_dashboard.py
+csi_dashboard_v2.py
+check_data.py
+check_shift.py
+make_v4.py
+data/*/test_*.csv
+data/*/test_*.csv
