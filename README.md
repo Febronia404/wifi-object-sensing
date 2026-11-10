@@ -2,8 +2,6 @@
 
 Detect whether a room is **empty**, has a person **standing still**, or has a person **moving**, using Wi-Fi Channel State Information (CSI) from two ESP32 boards. No router is needed.
 
-> Demo video: *(add your YouTube link here)*
-
 ## How it works
 
 - One ESP32 (**TX**) broadcasts ESP-NOW packets at 50 packets/sec on channel 11.
