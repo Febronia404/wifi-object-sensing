@@ -5,11 +5,17 @@ PORT = "COM7"
 BAUD = 500000
 N_SUB = 64
 
+LABELS = ["empty", "standing", "moving"]
+
 if len(sys.argv) < 2:
-    print("Usage: python collect.py LABEL [SECONDS]")
+    print("Usage: python collect.py LABEL [SECONDS] [PLACE]")
+    print("  LABEL: " + " | ".join(LABELS))
     sys.exit(1)
 
 label = sys.argv[1]
+if label not in LABELS:
+    print(f"Error: unknown label '{label}'. Allowed labels: {', '.join(LABELS)}")
+    sys.exit(1)
 secs = int(sys.argv[2]) if len(sys.argv) > 2 else 120
 place = sys.argv[3] if len(sys.argv) > 3 else "bedroom"
 
