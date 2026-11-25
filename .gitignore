@@ -1,4 +1,4 @@
-﻿# Old raw recordings in the project root (training data lives in data/)
+# Old raw recordings in the project root (training data lives in data/)
 /csi_*.csv
 
 # Backups and old presentation
@@ -28,4 +28,4 @@ check_data.py
 check_shift.py
 make_v4.py
 data/*/test_*.csv
-data/*/test_*.csv
+
