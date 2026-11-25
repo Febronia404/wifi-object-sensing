@@ -5,7 +5,9 @@ import joblib
 import numpy as np
 import serial
 
-PORT, BAUD, N_SUB = "COM7", 500000, 64
+DEFAULT_PORT = "COM7"
+BAUD, N_SUB = 500000, 64
+PORT = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_PORT
 STEP, SKIP = 25, 100
 
 m = joblib.load("model.pkl")
