@@ -21,6 +21,7 @@ for place in sorted(os.listdir("data")):
     for lab in LABELS:
         files = sorted(glob.glob(os.path.join(p, f"{lab}_*.csv")))
         if files:
+            print(f"  {place}/{lab}: using {os.path.basename(files[-1])}")
             d[lab] = pd.read_csv(files[-1])[cols].values[SKIP:].astype(float)
     if len(d) == 3:
         data[place] = d
