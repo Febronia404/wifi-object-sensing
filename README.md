@@ -1,4 +1,4 @@
-﻿# WiFi Object Sensing: Human Presence & Motion Detection with ESP32 CSI
+# WiFi Object Sensing: Human Presence & Motion Detection with ESP32 CSI
 
 Detect whether a room is **empty**, has a person **standing still**, or has a person **moving**, using Wi-Fi Channel State Information (CSI) from two ESP32 boards. No router is needed.
 
@@ -121,4 +121,4 @@ Motion energy alone cannot separate STANDING from EMPTY. The spectrum shift can 
 
 ## License
 
-*(add a license, e.g. MIT, from GitHub's "Add file" menu)*
+This project is licensed under the MIT License - see [LICENSE](LICENSE).
