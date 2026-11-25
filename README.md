@@ -93,7 +93,7 @@ During the first ~11 seconds, stay away from the boards and keep the room still.
 | Train on bedroom, test on room2 (unseen place) | 87.4% |
 | Same places, time split (70% train / 30% test with a gap) | 98.5% |
 
-Data: 3 sessions (empty / standing / moving) of 2 minutes each, in 2 places. The most common error is EMPTY being predicted as MOVING in the place with the weaker signal.
+Data: 3 sessions (empty / standing / moving) of 2 minutes each, in 2 places. This is a small proof of concept (2 places, limited recordings), so the unseen-place numbers matter more than the time-split number. The most common error is EMPTY being predicted as MOVING in the place with the weaker signal.
 
 Motion energy alone cannot separate STANDING from EMPTY. The spectrum shift can (median shift: about 0.0044 for EMPTY vs 0.0645 for STANDING).
 
@@ -122,3 +122,4 @@ Motion energy alone cannot separate STANDING from EMPTY. The spectrum shift can 
 ## License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE).
+
