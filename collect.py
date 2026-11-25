@@ -1,14 +1,14 @@
 import sys, os, csv, time, serial
 from datetime import datetime
 
-PORT = "COM7"
+DEFAULT_PORT = "COM7"
 BAUD = 500000
 N_SUB = 64
 
 LABELS = ["empty", "standing", "moving"]
 
 if len(sys.argv) < 2:
-    print("Usage: python collect.py LABEL [SECONDS] [PLACE]")
+    print("Usage: python collect.py LABEL [SECONDS] [PLACE] [PORT]")
     print("  LABEL: " + " | ".join(LABELS))
     sys.exit(1)
 
@@ -18,6 +18,7 @@ if label not in LABELS:
     sys.exit(1)
 secs = int(sys.argv[2]) if len(sys.argv) > 2 else 120
 place = sys.argv[3] if len(sys.argv) > 3 else "bedroom"
+PORT = sys.argv[4] if len(sys.argv) > 4 else DEFAULT_PORT
 
 os.makedirs(os.path.join("data", place), exist_ok=True)
 fname = os.path.join("data", place, f"{label}_{datetime.now():%Y%m%d_%H%M%S}.csv")
